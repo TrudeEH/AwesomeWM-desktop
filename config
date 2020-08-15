@@ -377,7 +377,7 @@ menu-2-1-exec = menu-open-0
 type = custom/script
 exec = echo ""
 interval = 300
-click-left = xterm -e "cd ~ ; git pull origin master ; sudo snap refresh ; sudo apt update ; sudo apt upgrade -y ; sudo apt dist-upgrade -y ; sudo apt autoremove -y ; sudo apt autoclean -y" &
+click-left = xterm -e "bash ~/TrudeOS/update.sh" &
 click-right = xterm -e "htop" &
 
 [module/wifite]
