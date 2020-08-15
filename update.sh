@@ -1,15 +1,19 @@
 #! /bin/bash
 
 cd ~/TrudeOS/
-git status | grep "Your branch is up to date with 'origin/master'"
 
-if [ $? == 0 ]
+
+git fetch
+HEADHASH=$(git rev-parse HEAD)
+UPSTREAMHASH=$(git rev-parse master@{upstream})
+
+if [ "$HEADHASH" != "$UPSTREAMHASH" ]
 then
-	echo "[I] TrudeOS está atualizado."
-else
 	echo "[+] A atualizar TrudeOS..."
 	git pull origin master
 	./OSconfig.sh
+else
+	echo "[I] TrudeOS está atualizado."
 fi
 
 sudo snap refresh
