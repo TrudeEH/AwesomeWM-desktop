@@ -71,22 +71,25 @@ sudo rm -rf wifite2
 echo "[+] A instalar dependências do ambiente..."
 sudo apt-get install cmake cmake-data libcairo2-dev libxcb1-dev libxcb-ewmh-dev libxcb-icccm4-dev libxcb-image0-dev libxcb-randr0-dev libxcb-util0-dev libxcb-xkb-dev pkg-config python-xcbgen xcb-proto libxcb-xrm-dev libasound2-dev libmpdclient-dev libiw-dev libcurl4-openssl-dev libpulse-dev libxcb-composite0-dev xcb libxcb-ewmh2 -y &> /dev/null
 git clone https://github.com/jaagr/polybar.git &> /dev/null
-echo "[I] Por favor aceite todas as opções (y):"
+echo "[I] Por favor escreva a seguinte sequência: y, n, y, y, y, y, y, y, y, y, y:"
 cd polybar && ./build.sh > /dev/null
 cd .. && rm -rf polybar
 
 echo "[+] A configurar ambiente..."
+mkdir ~/.config &> /dev/null
 mkdir ~/.config/awesome &> /dev/null
 mkdir ~/.config/polybar &> /dev/null
 mkdir ~/.fonts &> /dev/null
+mkdir ~/.local &> /dev/null
+mkdir ~/.local/share &> /dev/null
 mkdir ~/.local/share/fonts &> /dev/null
 echo "xterm*font:     *-fixed-*-*-*-18-*" > ~/.Xresources # Change terminal font size
-rm ~/.config/awesome/rc.lua
-rm ~/.config/awesome/theme.lua
-rm ~/.config/awesome/wallpaper.png
-rm -rf ~/.config/polybar/*
-rm -rf ~/.fonts/*
-rm -rf ~/.local/share/fonts/*
+rm ~/.config/awesome/rc.lua &> /dev/null
+rm ~/.config/awesome/theme.lua &> /dev/null
+rm ~/.config/awesome/wallpaper.png &> /dev/null
+rm -rf ~/.config/polybar/* &> /dev/null
+rm -rf ~/.fonts/* &> /dev/null
+rm -rf ~/.local/share/fonts/* &> /dev/null
 cp rc.lua ~/.config/awesome
 cp theme.lua ~/.config/awesome
 cp wallpaper.png ~/.config/awesome

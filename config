@@ -38,7 +38,7 @@ font-1 = "Material Icons:size=13;4"
 
 modules-left =
 modules-center = 
-modules-right = wifite pip seclevel pip update pip xbacklight pip pulseaudio pip memory pip cpu pip battery pip temperature pip date pip shutdown pip powermenu
+modules-right = wifite pip seclevel pip update pip pulseaudio pip memory pip cpu pip battery pip temperature pip date pip shutdown pip powermenu
 
 tray-position = right
 tray-padding = 2
@@ -347,7 +347,7 @@ animation-discharging-framerate = 750
 [module/temperature]
 type = internal/temperature
 thermal-zone = 0
-warn-temperature = 50
+warn-temperature = 60
 
 format = <label>
 format-underline = #f50a4d
