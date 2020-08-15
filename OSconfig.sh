@@ -23,7 +23,7 @@ echo "[+] A instalar pacotes..."
 sudo apt install gparted kmix network-manager firefox telegram-desktop flameshot vim alsa-utils wicd-curses htop git pcmanfm nano pavucontrol snapd -y &> /dev/null
 
 echo "[+] A instalar python..."
-sudo apt install -y python3-tk python3 python3-pip python python-pip >/dev/null
+sudo apt install -y python3-tk python3 python3-pip python python-pip &>/dev/null
 
 echo "[+] A instalar GUI..."
 sudo apt install dmenu slim xorg awesome xterm compton -y &> /dev/null
