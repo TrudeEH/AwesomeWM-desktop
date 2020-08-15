@@ -2,12 +2,9 @@
 
 cd ~/TrudeOS/
 
+git checkout | grep "Your branch is up to date with 'origin/master'."
 
-git fetch
-HEADHASH=$(git rev-parse HEAD)
-UPSTREAMHASH=$(git rev-parse master@{upstream})
-
-if [ "$HEADHASH" != "$UPSTREAMHASH" ]
+if [ if $? != 0 ]
 then
 	echo "[+] A atualizar TrudeOS..."
 	git pull origin master
