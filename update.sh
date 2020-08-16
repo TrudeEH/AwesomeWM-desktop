@@ -2,7 +2,7 @@
 
 cd ~/TrudeOS/
 
-git pull | grep "Already up to date."
+git pull | grep "Already up to date." > /dev/null
 
 if [ $? != 0 ]
 then
