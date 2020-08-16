@@ -1,2 +1,2 @@
-# TrudeOS v1.1
+# TrudeOS v1.2
 Telegram: @TrudeEH
