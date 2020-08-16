@@ -109,7 +109,7 @@ cp vimrc ~/.vimrc
 
 sudo apt install -y gufw macchanger proxychains &> /dev/null
 
-echo "O sistema foi instalado!"
+echo "[I] TrudeOS foi instalado! Pode reiniciar o computador."
 
 # Notas:
 # amixer -D pulse sset Master 50%  -> Regula o volume
