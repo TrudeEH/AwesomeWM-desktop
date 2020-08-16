@@ -69,6 +69,7 @@ cd wifite2
 sudo python3 setup.py install &> /dev/null
 cd ..
 sudo rm -rf wifite2
+cd ~/TrudeOS
 echo -ne '[####################.....]\r'
 
 # Instalar dependências do ambiente:
