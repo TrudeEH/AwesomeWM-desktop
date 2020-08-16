@@ -6,36 +6,42 @@ echo "[I] AVISO: Testado apenas com Ubuntu Minimal 18.04!"
 echo "[I] Aperte enter para continuar."
 read
 
-echo "[+] A atualizar repo..."
+sudo echo
+
+echo "[+] A instalar TrudeOS..."
+
+# Atualizar base do sistema:
+echo -ne '[.........................]\r'
 sudo apt update -y &> /dev/null
-echo "[+] A atualizar programas..."
+echo -ne '[#........................]\r'
 sudo apt upgrade -y &> /dev/null
-echo "[+] A atualizar distro..."
+echo -ne '[##.......................]\r'
 sudo apt dist-upgrade -y &> /dev/null
-echo "[+] A remover dependências.."
+echo -ne '[###......................]\r'
 sudo apt autoremove -y &> /dev/null
-echo "[+] A limpar cache..."
+echo -ne '[####.....................]\r'
 sudo apt autoclean -y &> /dev/null
+echo -ne '[#####....................]\r'
 
 # --------------------------------------------------
 
-echo "[+] A instalar pacotes..."
+# Instalar pacotes:
 sudo apt install gparted kmix network-manager-gnome network-manager firefox telegram-desktop flameshot vim alsa-utils wicd-curses htop git pcmanfm nano pavucontrol snapd -y &> /dev/null
+echo -ne '[#########................]\r'
 
-echo "[+] A instalar python..."
+# Instalar python:
 sudo apt install -y python3-tk python3 python3-pip python python-pip &>/dev/null
+echo -ne '[############.............]\r'
 
-echo "[+] A instalar GUI..."
+# Instalar GUI:
 sudo apt install dmenu slim xorg awesome xterm compton -y &> /dev/null
+echo -ne '[##############...........]\r'
 
-echo "[+] A instalar wine..."
+# Instalar wine:
 sudo apt install wine-stable mono-complete -y &> /dev/null
+echo -ne '[################.........]\r'
 
-echo "[+] A configurar rede..."
-curl -s https://install.zerotier.com | sudo bash &> /dev/null
-sudo zerotier-cli join 9f77fc393ebe610a &> /dev/null
-
-echo "[+] A instalar wifite..."
+# Instalar wifite:
 # Bully:
 sudo apt-get -y install reaver libpcap-dev libssl-dev aircrack-ng &> /dev/null
 git clone https://github.com/aanarchyy/bully &> /dev/null
@@ -67,15 +73,17 @@ cd wifite2
 sudo python3 setup.py install &> /dev/null
 cd ..
 sudo rm -rf wifite2
+echo -ne '[####################.....]\r'
 
-echo "[+] A instalar dependências do ambiente..."
+# Instalar dependências do ambiente:
 sudo apt-get install cmake cmake-data libcairo2-dev libxcb1-dev libxcb-ewmh-dev libxcb-icccm4-dev libxcb-image0-dev libxcb-randr0-dev libxcb-util0-dev libxcb-xkb-dev pkg-config python-xcbgen xcb-proto libxcb-xrm-dev libasound2-dev libmpdclient-dev libiw-dev libcurl4-openssl-dev libpulse-dev libxcb-composite0-dev xcb libxcb-ewmh2 -y &> /dev/null
-git clone https://github.com/jaagr/polybar.git &> /dev/null
-echo "[I] Por favor escreva a seguinte sequência: y, n, y, y, y, y, y, y, y, y, y:"
-cd polybar && ./build.sh > /dev/null
-cd .. && rm -rf polybar
+echo -ne '[######################...]\r'
+echo -ne '\n'
+cd polybar && ./build.sh &> /dev/null
+cd ..
+echo -ne '[#########################]\r'
 
-echo "[+] A configurar ambiente..."
+# Configurar ambiente:
 mkdir ~/.config &> /dev/null
 mkdir ~/.config/awesome &> /dev/null
 mkdir ~/.config/polybar &> /dev/null
@@ -98,8 +106,9 @@ cp -r fonts/* ~/.local/share/fonts/
 cp config ~/.config/polybar
 cp vimrc ~/.vimrc
 
-echo "[+] A preparar segurança..."
 sudo apt install -y gufw macchanger proxychains &> /dev/null
+
+echo "O sistema foi instalado!"
 
 # Notas:
 # amixer -D pulse sset Master 50%  -> Regula o volume
