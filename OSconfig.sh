@@ -2,10 +2,6 @@
 
 # -------------------------------------------------
 
-echo "[I] AVISO: Testado apenas com Ubuntu Minimal 18.04!"
-echo "[I] Aperte enter para continuar."
-read
-
 sudo echo
 
 echo "[+] A instalar TrudeOS..."
