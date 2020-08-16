@@ -82,6 +82,7 @@ echo -ne '\n'
 cd polybar && ./build.sh &> /dev/null
 cd ..
 echo -ne '[#########################]\r'
+echo -ne '\n'
 
 # Configurar ambiente:
 mkdir ~/.config &> /dev/null
