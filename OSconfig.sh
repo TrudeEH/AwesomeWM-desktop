@@ -22,7 +22,7 @@ echo -ne '[#####....................]\r'
 # --------------------------------------------------
 
 # Instalar pacotes:
-sudo apt install gparted kmix network-manager-gnome network-manager firefox telegram-desktop flameshot vim alsa-utils wicd-curses htop git pcmanfm nano pavucontrol snapd -y &> /dev/null
+sudo apt install gparted kmix network-manager-gnome network-manager firefox-esr telegram-desktop flameshot vim alsa-utils wicd-curses htop git pcmanfm nano pavucontrol snapd -y &> /dev/null
 echo -ne '[#########................]\r'
 
 # Instalar python:
