@@ -116,6 +116,16 @@ cp -r fonts/* ~/.local/share/fonts/
 cp config ~/.config/polybar
 cp vimrc ~/.vimrc
 
+# Drivers:
+echo "[+] A instalar drivers..."
+echo -ne '[.........................]\r'
+cat sources > /etc/apt/sources.list
+echo -ne '[########.................]\r'
+sudo apt update &> /dev/null
+echo -ne '[###############..........]\r'
+sudo apt install firmware-iwlwifi -y &> /dev/null
+echo -ne '[#########################]\r'
+
 echo
 echo "[I] TrudeOS foi instalado! Pode reiniciar o computador."
 
