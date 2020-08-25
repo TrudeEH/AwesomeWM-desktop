@@ -70,7 +70,7 @@ echo -ne '[##################.......]\r'
 cd hcxtools
 make &> /dev/null
 echo -ne '[###################......]\r'
-sudo make install
+sudo make install &> /dev/null
 echo -ne '[####################.....]\r'
 cd ..
 rm -rf hcxtools
@@ -78,7 +78,7 @@ rm -rf hcxtools
 git clone https://github.com/derv82/wifite2.git &> /dev/null
 cd wifite2
 echo -ne '[######################...]\r'
-sudo python3 setup.py install
+sudo python3 setup.py install &> /dev/null
 echo -ne '[########################.]\r'
 cd ..
 sudo rm -rf wifite2
