@@ -123,6 +123,15 @@ sudo cat sources > /etc/apt/sources.list
 echo -ne '[########.................]\r'
 sudo apt update &> /dev/null
 echo -ne '[###############..........]\r'
+
+cat /proc/cpuinfo | grep 'Intel' &> /dev/null
+if [ $? == 0 ]
+then
+    sudo apt install intel-microcode -y &> /dev/null
+else
+    sudo apt install amd64-microcode -y &> /dev/null
+fi
+
 sudo apt install firmware-iwlwifi -y &> /dev/null
 echo -ne '[#########################]\r'
 
