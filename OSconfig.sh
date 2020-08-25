@@ -119,7 +119,7 @@ cp vimrc ~/.vimrc
 # Drivers:
 echo "[+] A instalar drivers..."
 echo -ne '[.........................]\r'
-cat sources > /etc/apt/sources.list
+sudo cat sources > /etc/apt/sources.list
 echo -ne '[########.................]\r'
 sudo apt update &> /dev/null
 echo -ne '[###############..........]\r'
