@@ -505,6 +505,6 @@ beautiful.useless_gap = 5
 awful.spawn.with_shell("killall -q polybar ; while pgrep -u $UID -x polybar >/dev/null; do sleep 1;done ; polybar tbar")
 awful.spawn.with_shell("nm-applet")
 --awful.spawn.with_shell("kmix")
-awful.spawn.with_shell("telegram-desktop")
+--awful.spawn.with_shell("telegram-desktop")
 awful.spawn.with_shell("killall -q flameshot ; sleep 10 && flameshot")
 awful.spawn.with_shell("compton")
