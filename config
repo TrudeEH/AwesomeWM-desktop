@@ -388,8 +388,8 @@ click-left = xterm -e "sudo wifite --wps-only" &
 [module/shutdown]
 type = custom/script
 exec = echo ""
-;click-left = xterm -e "sudo shutdown now" &
-click-left = systemctl poweroff &
+click-left = xterm -e "sudo shutdown now" &
+;click-left = systemctl poweroff &
 
 [module/seclevel]
 type = custom/script
