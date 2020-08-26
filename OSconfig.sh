@@ -132,7 +132,7 @@ else
     sudo apt install amd64-microcode -y &> /dev/null
 fi
 
-sudo apt install firmware-iwlwifi -y &> /dev/null
+sudo apt install firmware-iwlwifi firmware-realtek -y &> /dev/null
 echo -ne '[#########################]\r'
 echo -ne '\n'
 
