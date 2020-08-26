@@ -36,9 +36,9 @@ module-margin-right = 2
 font-0 = Ubuntu-C:pixelsize=10;1
 font-1 = "Material Icons:size=13;4"
 
-modules-left =
+modules-left = version
 modules-center = 
-modules-right = wifite pip seclevel pip update pip pulseaudio pip memory pip cpu pip battery pip temperature pip date pip shutdown pip powermenu
+modules-right = wifite pip seclevel pip update pip backup pip pulseaudio pip memory pip cpu pip battery pip temperature pip date pip shutdown pip powermenu
 
 tray-position = right
 tray-padding = 2
@@ -404,6 +404,15 @@ click-left = xterm -e "bash /$HOME/.config/polybar/macchanger.sh" &
 [module/pip]
 type = custom/script
 exec = echo "|"
+
+[module/backup]
+type = custom/script
+exec = echo ""
+click-left = deja-dup &
+
+[module/version]
+type = custom/script
+exec = echo " TrudeOS v1.4.1"
 
 [settings]
 screenchange-reload = true
