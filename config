@@ -412,7 +412,7 @@ click-left = deja-dup &
 
 [module/version]
 type = custom/script
-exec = echo " TrudeOS v1.4.1"
+exec = echo " TrudeOS v1.4.2"
 
 [settings]
 screenchange-reload = true
