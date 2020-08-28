@@ -199,7 +199,7 @@ format-prefix = ""
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #4bffdc
 label =  %percentage_used%%
-rudeOS
+
 [module/wlan]
 type = internal/network
 interface = net1
