@@ -25,11 +25,10 @@ echo
 # --------------------------------------------------
 
 # Instalar pacotes:
-sudo apt install gparted kmix network-manager-gnome network-manager firefox-esr telegram-desktop flameshot vim alsa-utils wicd-curses htop git pcmanfm nano pavucontrol snapd -y
+sudo apt install gparted network-manager-gnome network-manager firefox-esr telegram-desktop flameshot vim alsa-utils wicd-curses htop git pcmanfm nano pavucontrol snapd -y
 sudo apt install -y python3-tk python3 python3-pip python python-pip
 sudo apt install dmenu slim xorg awesome xterm compton -y 
 sudo apt install -y gufw macchanger proxychains deja-dup duplicity
-sudo apt install wine-stable mono-complete -y 
 sudo apt-get install unifont cmake cmake-data libcairo2-dev libxcb1-dev libxcb-ewmh-dev libxcb-icccm4-dev libxcb-image0-dev libxcb-randr0-dev libxcb-util0-dev libxcb-xkb-dev pkg-config python-xcbgen xcb-proto libxcb-xrm-dev libasound2-dev libmpdclient-dev libiw-dev libcurl4-openssl-dev libpulse-dev libxcb-composite0-dev xcb libxcb-ewmh2 -y
 
 # Instalar wifite:
