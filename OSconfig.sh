@@ -27,7 +27,7 @@ echo
 # Instalar pacotes:
 sudo apt install gparted network-manager-gnome network-manager firefox-esr telegram-desktop flameshot vim alsa-utils wicd-curses htop git pcmanfm nano pavucontrol snapd -y
 sudo apt install -y python3-tk python3 python3-pip python python-pip
-sudo apt install dmenu slim xorg awesome xterm compton -y 
+sudo apt install dmenu slim xorg awesome xterm plymouth compton -y 
 sudo apt install -y gufw macchanger proxychains deja-dup duplicity
 sudo apt-get install unifont cmake cmake-data libcairo2-dev libxcb1-dev libxcb-ewmh-dev libxcb-icccm4-dev libxcb-image0-dev libxcb-randr0-dev libxcb-util0-dev libxcb-xkb-dev pkg-config python-xcbgen xcb-proto libxcb-xrm-dev libasound2-dev libmpdclient-dev libiw-dev libcurl4-openssl-dev libpulse-dev libxcb-composite0-dev xcb libxcb-ewmh2 -y
 
@@ -101,12 +101,17 @@ mkdir ~/.local &> /dev/null
 mkdir ~/.local/share &> /dev/null
 mkdir ~/.local/share/fonts &> /dev/null
 echo "xterm*font:     *-fixed-*-*-*-18-*" > ~/.Xresources # Change terminal font size
+
 rm ~/.config/awesome/rc.lua &> /dev/null
 rm ~/.config/awesome/theme.lua &> /dev/null
 rm ~/.config/awesome/wallpaper.png &> /dev/null
 rm -rf ~/.config/polybar/* &> /dev/null
 rm -rf ~/.fonts/* &> /dev/null
 rm -rf ~/.local/share/fonts/* &> /dev/null
+rm ~/.vimrc
+sudo rm -rf /usr/share/slim/themes/tslim
+sudo rm /etc/slim.conf
+
 cp rc.lua ~/.config/awesome
 cp theme.lua ~/.config/awesome
 cp wallpaper.png ~/.config/awesome
@@ -114,6 +119,8 @@ cp -r fonts/* ~/.fonts
 cp -r fonts/* ~/.local/share/fonts/
 cp config ~/.config/polybar
 cp vimrc ~/.vimrc
+sudo cp -r tslim/ /usr/share/slim/themes
+sudo cp slim.conf /etc/slim.conf
 
 # Drivers:
 echo "[+] A instalar drivers..."
