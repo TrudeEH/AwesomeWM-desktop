@@ -199,7 +199,7 @@ format-prefix = ""
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #4bffdc
 label =  %percentage_used%%
-
+rudeOS
 [module/wlan]
 type = internal/network
 interface = net1
@@ -412,7 +412,7 @@ click-left = deja-dup &
 
 [module/version]
 type = custom/script
-exec = echo " TrudeOS v1.4.2"
+exec = echo " TrudeOS v1.4.3"
 
 [settings]
 screenchange-reload = true
