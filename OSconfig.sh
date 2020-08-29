@@ -100,17 +100,18 @@ mkdir ~/.fonts &> /dev/null
 mkdir ~/.local &> /dev/null
 mkdir ~/.local/share &> /dev/null
 mkdir ~/.local/share/fonts &> /dev/null
-rm ~/.Xresources
 
+rm ~/.Xresources
 rm ~/.config/awesome/rc.lua &> /dev/null
 rm ~/.config/awesome/theme.lua &> /dev/null
 rm ~/.config/awesome/wallpaper.png &> /dev/null
 rm -rf ~/.config/polybar/* &> /dev/null
 rm -rf ~/.fonts/* &> /dev/null
 rm -rf ~/.local/share/fonts/* &> /dev/null
-rm ~/.vimrc
-sudo rm -rf /usr/share/slim/themes/tslim
-sudo rm /etc/slim.conf
+rm ~/.vimrc &> /dev/null
+sudo rm -rf /usr/share/slim/themes/tslim &> /dev/null
+sudo rm /etc/slim.conf &> /dev/null
+rm ~/.bashrc &> /dev/null
 
 cp rc.lua ~/.config/awesome
 cp theme.lua ~/.config/awesome
@@ -122,6 +123,7 @@ cp vimrc ~/.vimrc
 sudo cp -r tslim/ /usr/share/slim/themes
 sudo cp slim.conf /etc/slim.conf
 cp Xresources ~/.Xresources
+cp bashrc ~/.bashrc
 
 xrdb -merge ~/.Xresources
 
