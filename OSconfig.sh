@@ -100,7 +100,7 @@ mkdir ~/.fonts &> /dev/null
 mkdir ~/.local &> /dev/null
 mkdir ~/.local/share &> /dev/null
 mkdir ~/.local/share/fonts &> /dev/null
-echo "xterm*font:     *-fixed-*-*-*-18-*" > ~/.Xresources # Change terminal font size
+rm ~/.Xresources
 
 rm ~/.config/awesome/rc.lua &> /dev/null
 rm ~/.config/awesome/theme.lua &> /dev/null
@@ -121,6 +121,9 @@ cp config ~/.config/polybar
 cp vimrc ~/.vimrc
 sudo cp -r tslim/ /usr/share/slim/themes
 sudo cp slim.conf /etc/slim.conf
+cp Xresources ~/.Xresources
+
+xrdb -merge ~/.Xresources
 
 # Drivers:
 echo "[+] A instalar drivers..."

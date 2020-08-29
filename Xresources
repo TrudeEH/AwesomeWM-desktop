@@ -1,0 +1,39 @@
+xterm*font:     *-fixed-*-*-*-18-*
+
+! special
+xterm*.foreground:   #c5c8c6
+xterm*.background:   #0d0d0d
+xterm*.cursorColor:  #c5c8c6
+
+! black
+xterm*.color0:       #1d1f21
+xterm*.color8:       #969896
+
+! red
+xterm*.color1:       #cc342b
+xterm*.color9:       #cc342b
+
+! green
+xterm*.color2:       #198844
+xterm*.color10:      #198844
+
+! yellow
+xterm*.color3:       #fba922
+xterm*.color11:      #fba922
+
+! blue
+xterm*.color4:       #3971ed
+xterm*.color12:      #3971ed
+
+! magenta
+xterm*.color5:       #a36ac7
+xterm*.color13:      #a36ac7
+
+! cyan
+xterm*.color6:       #3971ed
+xterm*.color14:      #3971ed
+
+! white
+xterm*.color7:       #c5c8c6
+xterm*.color15:      #ffffff
+
