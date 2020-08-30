@@ -1,6 +1,8 @@
 # TrudeOS v1.4.6
 Telegram: @TrudeEH
 
+Please visit the wiki: https://github.com/trudertube/TrudeOS/wiki
+
 # Screenshots:
 
 ![a](https://user-images.githubusercontent.com/48379395/91666608-14339280-eaf6-11ea-918e-3f06747516ed.png)
