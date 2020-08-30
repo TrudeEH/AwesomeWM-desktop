@@ -6,9 +6,9 @@ sudo echo
 
 echo "[+] A instalar TrudeOS..."
 
-# Atualizar base do sistema:
+# Update base:
 echo
-echo "[+] A atualizar a base do sistema..."
+echo "[+] Updating the system base..."
 echo -ne '[.........................]\r'
 sudo apt update -y &> /dev/null
 echo -ne '[#####....................]\r'
@@ -24,17 +24,17 @@ echo -ne '\n'
 echo
 # --------------------------------------------------
 
-# Instalar pacotes:
+# Install packages:
 sudo apt install gparted network-manager-gnome network-manager firefox-esr telegram-desktop flameshot vim alsa-utils wicd-curses htop git pcmanfm nano pavucontrol snapd -y
 sudo apt install -y python3-tk python3 python3-pip python python-pip
 sudo apt install dmenu slim xorg awesome xterm plymouth compton -y 
 sudo apt install -y gufw macchanger proxychains deja-dup duplicity
 sudo apt-get install unifont cmake cmake-data libcairo2-dev libxcb1-dev libxcb-ewmh-dev libxcb-icccm4-dev libxcb-image0-dev libxcb-randr0-dev libxcb-util0-dev libxcb-xkb-dev pkg-config python-xcbgen xcb-proto libxcb-xrm-dev libasound2-dev libmpdclient-dev libiw-dev libcurl4-openssl-dev libpulse-dev libxcb-composite0-dev xcb libxcb-ewmh2 -y
 
-# Instalar wifite:
+# Install wifite:
 # Bully:
 echo
-echo "[+] A instalar wifite..."
+echo "[+] Installing wifite..."
 echo -ne '[#........................]\r'
 sudo apt-get -y install reaver libpcap-dev libssl-dev aircrack-ng &> /dev/null
 echo -ne '[####.....................]\r'
@@ -92,7 +92,7 @@ cd polybar && ./build.sh -A -a -p -n -c
 cd ..
 rm -rf polybar
 
-# Configurar ambiente:
+# Settings:
 mkdir ~/.config &> /dev/null
 mkdir ~/.config/awesome &> /dev/null
 mkdir ~/.config/polybar &> /dev/null
@@ -128,7 +128,7 @@ cp bashrc ~/.bashrc
 xrdb -merge ~/.Xresources
 
 # Drivers:
-echo "[+] A instalar drivers..."
+echo "[+] Installing drivers..."
 echo -ne '[.........................]\r'
 sudo cat sources | sudo tee /etc/apt/sources.list &> /dev/null
 echo -ne '[########.................]\r'
@@ -148,12 +148,4 @@ echo -ne '[#########################]\r'
 echo -ne '\n'
 
 echo
-echo "[I] TrudeOS foi instalado! Pode reiniciar o computador."
-
-# Notas:
-# amixer -D pulse sset Master 50%  -> Regula o volume
-# sudo wicd-curses                 -> Ligar a rede Wifi
-# htop                             -> gestor de tarefas
-# pcmanfm                          -> GUI para gerir ficheiros
-# nano                             -> editor de texto
-
+echo "[I] TrudeOS has been installed! You can restart your computer."
