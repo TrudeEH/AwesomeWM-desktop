@@ -2,14 +2,14 @@
 
 cd ~/TrudeOS/
 
-git pull | grep "Already up to date." > /dev/null
+git pull | grep "Already up to date." &> /dev/null
 
 if [ $? != 0 ]
 then
-	echo "[+] A atualizar TrudeOS..."
+	echo "[+] Updating TrudeOS..."
 	./OSconfig.sh
 else
-	echo "[I] TrudeOS está atualizado."
+	echo "[I] TrudeOS is up to date."
 fi
 
 sudo snap refresh
