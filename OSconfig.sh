@@ -4,7 +4,7 @@
 
 sudo echo
 
-echo "[+] A instalar TrudeOS..."
+echo "[+] Installing TrudeOS..."
 
 # Update base:
 echo
