@@ -1,4 +1,4 @@
-# TrudeOS v1.4.6
+# TrudeOS - AwesomeWM v1.4.6
 Telegram: @TrudeEH
 
 Please visit the wiki: https://github.com/trudertube/TrudeOS/wiki
